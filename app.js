@@ -4,7 +4,7 @@ let path = require("path");
 let cors = require("cors");
 let mongoose = require("mongoose");
 let router = require("./routes/router");
-let port = 3000;
+let port = process.env.PORT;
 let app = express();
 
 //Connection to database
