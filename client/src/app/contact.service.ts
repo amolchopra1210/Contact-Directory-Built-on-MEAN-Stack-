@@ -11,7 +11,7 @@ export class ContactService {
   //retrieving contacts
 
   getContact(){
-    return this.http.get("http://localhost:3000/api/contacts").map(res => res.json());
+    return this.http.get("api/contacts").map(res => res.json());
   }
 
   //Add contact
@@ -19,12 +19,12 @@ export class ContactService {
   addContact(newContact){
     var headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/api/contacts', newContact, { headers : headers }).map(res => res.json());
+    return this.http.post('api/contacts', newContact, { headers : headers }).map(res => res.json());
   }
 
   //Delete Method
 
   deleteMethod(id){
-    return this.http.delete('http://localhost:3000/api/contacts/' + id).map(res => res.json());
+    return this.http.delete('api/contacts/' + id).map(res => res.json());
   }
 }
