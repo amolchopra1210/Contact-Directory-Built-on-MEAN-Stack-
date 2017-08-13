@@ -9,7 +9,7 @@ let app = express();
 
 //Connection to database
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost/contactList", (err, success) => {
+mongoose.connect("mongodb://amolchopra:mytimeisnow@ds129043.mlab.com:29043/contactlist", (err, success) => {
     if(err){
         console.log(err);
     }else{
